@@ -1,0 +1,1264 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70114D84-4B30-4ED3-8995-94FC2A12C591}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreeLaincer</RootNamespace>
+    <AssemblyName>FreeLaincer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44372</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Add.aspx" />
+    <Content Include="Admin\Bid.aspx" />
+    <Content Include="Admin\dist\css\adminlte.css" />
+    <Content Include="Admin\dist\css\adminlte.min.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.components.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.components.min.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.core.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.core.min.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.extra-components.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.pages.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.pages.min.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.plugins.css" />
+    <Content Include="Admin\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Admin\dist\img\AdminLTELogo.png" />
+    <Content Include="Admin\dist\img\avatar.png" />
+    <Content Include="Admin\dist\img\avatar04.png" />
+    <Content Include="Admin\dist\img\avatar2.png" />
+    <Content Include="Admin\dist\img\avatar3.png" />
+    <Content Include="Admin\dist\img\avatar5.png" />
+    <Content Include="Admin\dist\img\boxed-bg.jpg" />
+    <Content Include="Admin\dist\img\boxed-bg.png" />
+    <Content Include="Admin\dist\img\credit\american-express.png" />
+    <Content Include="Admin\dist\img\credit\cirrus.png" />
+    <Content Include="Admin\dist\img\credit\mastercard.png" />
+    <Content Include="Admin\dist\img\credit\mestro.png" />
+    <Content Include="Admin\dist\img\credit\paypal.png" />
+    <Content Include="Admin\dist\img\credit\paypal2.png" />
+    <Content Include="Admin\dist\img\credit\visa.png" />
+    <Content Include="Admin\dist\img\default-150x150.png" />
+    <Content Include="Admin\dist\img\icons.png" />
+    <Content Include="Admin\dist\img\photo1.png" />
+    <Content Include="Admin\dist\img\photo2.png" />
+    <Content Include="Admin\dist\img\photo3.jpg" />
+    <Content Include="Admin\dist\img\photo4.jpg" />
+    <Content Include="Admin\dist\img\prod-1.jpg" />
+    <Content Include="Admin\dist\img\prod-2.jpg" />
+    <Content Include="Admin\dist\img\prod-3.jpg" />
+    <Content Include="Admin\dist\img\prod-4.jpg" />
+    <Content Include="Admin\dist\img\prod-5.jpg" />
+    <Content Include="Admin\dist\img\user1-128x128.jpg" />
+    <Content Include="Admin\dist\img\user2-160x160.jpg" />
+    <Content Include="Admin\dist\img\user3-128x128.jpg" />
+    <Content Include="Admin\dist\img\user4-128x128.jpg" />
+    <Content Include="Admin\dist\img\user5-128x128.jpg" />
+    <Content Include="Admin\dist\img\user6-128x128.jpg" />
+    <Content Include="Admin\dist\img\user7-128x128.jpg" />
+    <Content Include="Admin\dist\img\user8-128x128.jpg" />
+    <Content Include="Admin\dist\js\adminlte.js" />
+    <Content Include="Admin\dist\js\adminlte.min.js" />
+    <Content Include="Admin\dist\js\demo.js" />
+    <Content Include="Admin\dist\js\pages\dashboard.js" />
+    <Content Include="Admin\dist\js\pages\dashboard2.js" />
+    <Content Include="Admin\dist\js\pages\dashboard3.js" />
+    <Content Include="Admin\docs\404.html" />
+    <Content Include="Admin\docs\assets\css\adminlte.css" />
+    <Content Include="Admin\docs\assets\css\adminlte.min.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.components.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.components.min.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.core.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.core.min.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.extra-components.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.pages.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.pages.min.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.plugins.css" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Admin\docs\assets\css\docs.css" />
+    <Content Include="Admin\docs\assets\css\highlighter.css" />
+    <Content Include="Admin\docs\assets\img\AdminLTELogo.png" />
+    <Content Include="Admin\docs\assets\img\logo-xl.png" />
+    <Content Include="Admin\docs\assets\img\logo-xs.png" />
+    <Content Include="Admin\docs\assets\img\user1-128x128.jpg" />
+    <Content Include="Admin\docs\assets\img\user3-128x128.jpg" />
+    <Content Include="Admin\docs\assets\img\user4-128x128.jpg" />
+    <Content Include="Admin\docs\assets\img\user5-128x128.jpg" />
+    <Content Include="Admin\docs\assets\img\user6-128x128.jpg" />
+    <Content Include="Admin\docs\assets\img\user7-128x128.jpg" />
+    <Content Include="Admin\docs\assets\img\user8-128x128.jpg" />
+    <Content Include="Admin\docs\assets\js\adminlte.js" />
+    <Content Include="Admin\docs\assets\js\adminlte.min.js" />
+    <Content Include="Admin\docs\assets\js\demo.js" />
+    <Content Include="Admin\docs\assets\js\pages\dashboard.js" />
+    <Content Include="Admin\docs\assets\js\pages\dashboard2.js" />
+    <Content Include="Admin\docs\assets\js\pages\dashboard3.js" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\all.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\all.min.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\brands.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\brands.min.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\regular.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\regular.min.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\solid.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\solid.min.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Admin\docs\assets\plugins\jquery\core.js" />
+    <Content Include="Admin\docs\assets\plugins\jquery\jquery.js" />
+    <Content Include="Admin\docs\assets\plugins\jquery\jquery.min.js" />
+    <Content Include="Admin\docs\assets\plugins\jquery\jquery.slim.js" />
+    <Content Include="Admin\docs\assets\plugins\jquery\jquery.slim.min.js" />
+    <Content Include="Admin\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.css" />
+    <Content Include="Admin\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.min.css" />
+    <Content Include="Admin\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.js" />
+    <Content Include="Admin\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="Admin\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.js" />
+    <Content Include="Admin\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper-utils.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper-utils.min.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper.min.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper-utils.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper-utils.min.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper.min.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper-utils.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper-utils.min.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper.js" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper.min.js" />
+    <Content Include="Admin\docs\_includes\foot.html" />
+    <Content Include="Admin\docs\_includes\footer.html" />
+    <Content Include="Admin\docs\_includes\head.html" />
+    <Content Include="Admin\docs\_includes\navbar.html" />
+    <Content Include="Admin\docs\_includes\sidebar.html" />
+    <Content Include="Admin\docs\_layouts\default.html" />
+    <Content Include="Admin\docs\_layouts\home.html" />
+    <Content Include="Admin\docs\_layouts\page.html" />
+    <Content Include="Admin\docs\_layouts\post.html" />
+    <Content Include="Admin\Employ.aspx" />
+    <Content Include="Admin\Employar.aspx" />
+    <Content Include="Admin\Home.aspx" />
+    <Content Include="Admin\index.html" />
+    <Content Include="Admin\index2.html" />
+    <Content Include="Admin\index3.html" />
+    <Content Include="Admin\pages\calendar.html" />
+    <Content Include="Admin\pages\charts\chartjs.html" />
+    <Content Include="Admin\pages\charts\flot.html" />
+    <Content Include="Admin\pages\charts\inline.html" />
+    <Content Include="Admin\pages\examples\404.html" />
+    <Content Include="Admin\pages\examples\500.html" />
+    <Content Include="Admin\pages\examples\blank.html" />
+    <Content Include="Admin\pages\examples\contacts.html" />
+    <Content Include="Admin\pages\examples\e_commerce.html" />
+    <Content Include="Admin\pages\examples\forgot-password.html" />
+    <Content Include="Admin\pages\examples\invoice-print.html" />
+    <Content Include="Admin\pages\examples\invoice.html" />
+    <Content Include="Admin\pages\examples\language-menu.html" />
+    <Content Include="Admin\pages\examples\legacy-user-menu.html" />
+    <Content Include="Admin\pages\examples\lockscreen.html" />
+    <Content Include="Admin\pages\examples\login.html" />
+    <Content Include="Admin\pages\examples\pace.html" />
+    <Content Include="Admin\pages\examples\profile.html" />
+    <Content Include="Admin\pages\examples\projects.html" />
+    <Content Include="Admin\pages\examples\project_add.html" />
+    <Content Include="Admin\pages\examples\project_detail.html" />
+    <Content Include="Admin\pages\examples\project_edit.html" />
+    <Content Include="Admin\pages\examples\recover-password.html" />
+    <Content Include="Admin\pages\examples\register.html" />
+    <Content Include="Admin\pages\forms\advanced.html" />
+    <Content Include="Admin\pages\forms\editors.html" />
+    <Content Include="Admin\pages\forms\general.html" />
+    <Content Include="Admin\pages\gallery.html" />
+    <Content Include="Admin\pages\layout\boxed.html" />
+    <Content Include="Admin\pages\layout\collapsed-sidebar.html" />
+    <Content Include="Admin\pages\layout\fixed-footer.html" />
+    <Content Include="Admin\pages\layout\fixed-sidebar.html" />
+    <Content Include="Admin\pages\layout\fixed-topnav.html" />
+    <Content Include="Admin\pages\layout\top-nav.html" />
+    <Content Include="Admin\pages\mailbox\compose.html" />
+    <Content Include="Admin\pages\mailbox\mailbox.html" />
+    <Content Include="Admin\pages\mailbox\read-mail.html" />
+    <Content Include="Admin\pages\tables\data.html" />
+    <Content Include="Admin\pages\tables\jsgrid.html" />
+    <Content Include="Admin\pages\tables\simple.html" />
+    <Content Include="Admin\pages\UI\buttons.html" />
+    <Content Include="Admin\pages\UI\general.html" />
+    <Content Include="Admin\pages\UI\icons.html" />
+    <Content Include="Admin\pages\UI\modals.html" />
+    <Content Include="Admin\pages\UI\navbar.html" />
+    <Content Include="Admin\pages\UI\ribbons.html" />
+    <Content Include="Admin\pages\UI\sliders.html" />
+    <Content Include="Admin\pages\UI\timeline.html" />
+    <Content Include="Admin\pages\widgets.html" />
+    <Content Include="Admin\Project.aspx" />
+    <Content Include="Admin\ProjectSkill.aspx" />
+    <Content Include="Admin\Rate.aspx" />
+    <Content Include="Admin\Review.aspx" />
+    <Content Include="Admin\Skill.aspx" />
+    <Content Include="Admin\starter.html" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Employee\AddBid.aspx" />
+    <Content Include="Employee\dist\css\adminlte.css" />
+    <Content Include="Employee\dist\css\adminlte.min.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.components.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.components.min.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.core.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.core.min.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.extra-components.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.pages.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.pages.min.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.plugins.css" />
+    <Content Include="Employee\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Employee\dist\img\AdminLTELogo.png" />
+    <Content Include="Employee\dist\img\avatar.png" />
+    <Content Include="Employee\dist\img\avatar04.png" />
+    <Content Include="Employee\dist\img\avatar2.png" />
+    <Content Include="Employee\dist\img\avatar3.png" />
+    <Content Include="Employee\dist\img\avatar5.png" />
+    <Content Include="Employee\dist\img\boxed-bg.jpg" />
+    <Content Include="Employee\dist\img\boxed-bg.png" />
+    <Content Include="Employee\dist\img\credit\american-express.png" />
+    <Content Include="Employee\dist\img\credit\cirrus.png" />
+    <Content Include="Employee\dist\img\credit\mastercard.png" />
+    <Content Include="Employee\dist\img\credit\mestro.png" />
+    <Content Include="Employee\dist\img\credit\paypal.png" />
+    <Content Include="Employee\dist\img\credit\paypal2.png" />
+    <Content Include="Employee\dist\img\credit\visa.png" />
+    <Content Include="Employee\dist\img\default-150x150.png" />
+    <Content Include="Employee\dist\img\icons.png" />
+    <Content Include="Employee\dist\img\photo1.png" />
+    <Content Include="Employee\dist\img\photo2.png" />
+    <Content Include="Employee\dist\img\photo3.jpg" />
+    <Content Include="Employee\dist\img\photo4.jpg" />
+    <Content Include="Employee\dist\img\prod-1.jpg" />
+    <Content Include="Employee\dist\img\prod-2.jpg" />
+    <Content Include="Employee\dist\img\prod-3.jpg" />
+    <Content Include="Employee\dist\img\prod-4.jpg" />
+    <Content Include="Employee\dist\img\prod-5.jpg" />
+    <Content Include="Employee\dist\img\user1-128x128.jpg" />
+    <Content Include="Employee\dist\img\user2-160x160.jpg" />
+    <Content Include="Employee\dist\img\user3-128x128.jpg" />
+    <Content Include="Employee\dist\img\user4-128x128.jpg" />
+    <Content Include="Employee\dist\img\user5-128x128.jpg" />
+    <Content Include="Employee\dist\img\user6-128x128.jpg" />
+    <Content Include="Employee\dist\img\user7-128x128.jpg" />
+    <Content Include="Employee\dist\img\user8-128x128.jpg" />
+    <Content Include="Employee\dist\js\adminlte.js" />
+    <Content Include="Employee\dist\js\adminlte.min.js" />
+    <Content Include="Employee\dist\js\demo.js" />
+    <Content Include="Employee\dist\js\pages\dashboard.js" />
+    <Content Include="Employee\dist\js\pages\dashboard2.js" />
+    <Content Include="Employee\dist\js\pages\dashboard3.js" />
+    <Content Include="Employee\docs\404.html" />
+    <Content Include="Employee\docs\assets\css\adminlte.css" />
+    <Content Include="Employee\docs\assets\css\adminlte.min.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.components.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.components.min.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.core.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.core.min.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.extra-components.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.pages.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.pages.min.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.plugins.css" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Employee\docs\assets\css\docs.css" />
+    <Content Include="Employee\docs\assets\css\highlighter.css" />
+    <Content Include="Employee\docs\assets\img\AdminLTELogo.png" />
+    <Content Include="Employee\docs\assets\img\logo-xl.png" />
+    <Content Include="Employee\docs\assets\img\logo-xs.png" />
+    <Content Include="Employee\docs\assets\img\user1-128x128.jpg" />
+    <Content Include="Employee\docs\assets\img\user3-128x128.jpg" />
+    <Content Include="Employee\docs\assets\img\user4-128x128.jpg" />
+    <Content Include="Employee\docs\assets\img\user5-128x128.jpg" />
+    <Content Include="Employee\docs\assets\img\user6-128x128.jpg" />
+    <Content Include="Employee\docs\assets\img\user7-128x128.jpg" />
+    <Content Include="Employee\docs\assets\img\user8-128x128.jpg" />
+    <Content Include="Employee\docs\assets\js\adminlte.js" />
+    <Content Include="Employee\docs\assets\js\adminlte.min.js" />
+    <Content Include="Employee\docs\assets\js\demo.js" />
+    <Content Include="Employee\docs\assets\js\pages\dashboard.js" />
+    <Content Include="Employee\docs\assets\js\pages\dashboard2.js" />
+    <Content Include="Employee\docs\assets\js\pages\dashboard3.js" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\all.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\all.min.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\brands.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\brands.min.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\regular.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\regular.min.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\solid.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\solid.min.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Employee\docs\assets\plugins\jquery\core.js" />
+    <Content Include="Employee\docs\assets\plugins\jquery\jquery.js" />
+    <Content Include="Employee\docs\assets\plugins\jquery\jquery.min.js" />
+    <Content Include="Employee\docs\assets\plugins\jquery\jquery.slim.js" />
+    <Content Include="Employee\docs\assets\plugins\jquery\jquery.slim.min.js" />
+    <Content Include="Employee\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.css" />
+    <Content Include="Employee\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.min.css" />
+    <Content Include="Employee\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.js" />
+    <Content Include="Employee\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="Employee\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.js" />
+    <Content Include="Employee\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper-utils.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper-utils.min.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper.min.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper-utils.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper-utils.min.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper.min.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper-utils.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper-utils.min.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper.js" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper.min.js" />
+    <Content Include="Employee\docs\_includes\foot.html" />
+    <Content Include="Employee\docs\_includes\footer.html" />
+    <Content Include="Employee\docs\_includes\head.html" />
+    <Content Include="Employee\docs\_includes\navbar.html" />
+    <Content Include="Employee\docs\_includes\sidebar.html" />
+    <Content Include="Employee\docs\_layouts\default.html" />
+    <Content Include="Employee\docs\_layouts\home.html" />
+    <Content Include="Employee\docs\_layouts\page.html" />
+    <Content Include="Employee\docs\_layouts\post.html" />
+    <Content Include="Employee\EmployBid.aspx" />
+    <Content Include="Employee\EmployProject.aspx" />
+    <Content Include="Employee\EmployRate.aspx" />
+    <Content Include="Employee\HomeEmploy.aspx" />
+    <Content Include="Employee\pages\calendar.html" />
+    <Content Include="Employee\pages\charts\chartjs.html" />
+    <Content Include="Employee\pages\charts\flot.html" />
+    <Content Include="Employee\pages\charts\inline.html" />
+    <Content Include="Employee\pages\examples\404.html" />
+    <Content Include="Employee\pages\examples\500.html" />
+    <Content Include="Employee\pages\examples\blank.html" />
+    <Content Include="Employee\pages\examples\contacts.html" />
+    <Content Include="Employee\pages\examples\e_commerce.html" />
+    <Content Include="Employee\pages\examples\forgot-password.html" />
+    <Content Include="Employee\pages\examples\invoice-print.html" />
+    <Content Include="Employee\pages\examples\invoice.html" />
+    <Content Include="Employee\pages\examples\language-menu.html" />
+    <Content Include="Employee\pages\examples\legacy-user-menu.html" />
+    <Content Include="Employee\pages\examples\lockscreen.html" />
+    <Content Include="Employee\pages\examples\login.html" />
+    <Content Include="Employee\pages\examples\pace.html" />
+    <Content Include="Employee\pages\examples\profile.html" />
+    <Content Include="Employee\pages\examples\projects.html" />
+    <Content Include="Employee\pages\examples\project_add.html" />
+    <Content Include="Employee\pages\examples\project_detail.html" />
+    <Content Include="Employee\pages\examples\project_edit.html" />
+    <Content Include="Employee\pages\examples\recover-password.html" />
+    <Content Include="Employee\pages\examples\register.html" />
+    <Content Include="Employee\pages\forms\advanced.html" />
+    <Content Include="Employee\pages\forms\editors.html" />
+    <Content Include="Employee\pages\forms\general.html" />
+    <Content Include="Employee\pages\gallery.html" />
+    <Content Include="Employee\pages\layout\boxed.html" />
+    <Content Include="Employee\pages\layout\collapsed-sidebar.html" />
+    <Content Include="Employee\pages\layout\fixed-footer.html" />
+    <Content Include="Employee\pages\layout\fixed-sidebar.html" />
+    <Content Include="Employee\pages\layout\fixed-topnav.html" />
+    <Content Include="Employee\pages\layout\top-nav.html" />
+    <Content Include="Employee\pages\mailbox\compose.html" />
+    <Content Include="Employee\pages\mailbox\mailbox.html" />
+    <Content Include="Employee\pages\mailbox\read-mail.html" />
+    <Content Include="Employee\pages\tables\data.html" />
+    <Content Include="Employee\pages\tables\jsgrid.html" />
+    <Content Include="Employee\pages\tables\simple.html" />
+    <Content Include="Employee\pages\UI\buttons.html" />
+    <Content Include="Employee\pages\UI\general.html" />
+    <Content Include="Employee\pages\UI\icons.html" />
+    <Content Include="Employee\pages\UI\modals.html" />
+    <Content Include="Employee\pages\UI\navbar.html" />
+    <Content Include="Employee\pages\UI\ribbons.html" />
+    <Content Include="Employee\pages\UI\sliders.html" />
+    <Content Include="Employee\pages\UI\timeline.html" />
+    <Content Include="Employee\pages\widgets.html" />
+    <Content Include="Employee\Password.aspx" />
+    <Content Include="Employee\profile.aspx" />
+    <Content Include="Employee\Rate-Review.aspx" />
+    <Content Include="Employer\CreateJob.aspx" />
+    <Content Include="Employer\dist\css\adminlte.css" />
+    <Content Include="Employer\dist\css\adminlte.min.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.components.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.components.min.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.core.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.core.min.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.extra-components.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.pages.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.pages.min.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.plugins.css" />
+    <Content Include="Employer\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Employer\dist\img\AdminLTELogo.png" />
+    <Content Include="Employer\dist\img\avatar.png" />
+    <Content Include="Employer\dist\img\avatar04.png" />
+    <Content Include="Employer\dist\img\avatar2.png" />
+    <Content Include="Employer\dist\img\avatar3.png" />
+    <Content Include="Employer\dist\img\avatar5.png" />
+    <Content Include="Employer\dist\img\boxed-bg.jpg" />
+    <Content Include="Employer\dist\img\boxed-bg.png" />
+    <Content Include="Employer\dist\img\credit\american-express.png" />
+    <Content Include="Employer\dist\img\credit\cirrus.png" />
+    <Content Include="Employer\dist\img\credit\mastercard.png" />
+    <Content Include="Employer\dist\img\credit\mestro.png" />
+    <Content Include="Employer\dist\img\credit\paypal.png" />
+    <Content Include="Employer\dist\img\credit\paypal2.png" />
+    <Content Include="Employer\dist\img\credit\visa.png" />
+    <Content Include="Employer\dist\img\default-150x150.png" />
+    <Content Include="Employer\dist\img\icons.png" />
+    <Content Include="Employer\dist\img\photo1.png" />
+    <Content Include="Employer\dist\img\photo2.png" />
+    <Content Include="Employer\dist\img\photo3.jpg" />
+    <Content Include="Employer\dist\img\photo4.jpg" />
+    <Content Include="Employer\dist\img\prod-1.jpg" />
+    <Content Include="Employer\dist\img\prod-2.jpg" />
+    <Content Include="Employer\dist\img\prod-3.jpg" />
+    <Content Include="Employer\dist\img\prod-4.jpg" />
+    <Content Include="Employer\dist\img\prod-5.jpg" />
+    <Content Include="Employer\dist\img\user1-128x128.jpg" />
+    <Content Include="Employer\dist\img\user2-160x160.jpg" />
+    <Content Include="Employer\dist\img\user3-128x128.jpg" />
+    <Content Include="Employer\dist\img\user4-128x128.jpg" />
+    <Content Include="Employer\dist\img\user5-128x128.jpg" />
+    <Content Include="Employer\dist\img\user6-128x128.jpg" />
+    <Content Include="Employer\dist\img\user7-128x128.jpg" />
+    <Content Include="Employer\dist\img\user8-128x128.jpg" />
+    <Content Include="Employer\dist\js\adminlte.js" />
+    <Content Include="Employer\dist\js\adminlte.min.js" />
+    <Content Include="Employer\dist\js\demo.js" />
+    <Content Include="Employer\dist\js\pages\dashboard.js" />
+    <Content Include="Employer\dist\js\pages\dashboard2.js" />
+    <Content Include="Employer\dist\js\pages\dashboard3.js" />
+    <Content Include="Employer\docs\404.html" />
+    <Content Include="Employer\docs\assets\css\adminlte.css" />
+    <Content Include="Employer\docs\assets\css\adminlte.min.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.components.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.components.min.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.core.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.core.min.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.extra-components.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.pages.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.pages.min.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.plugins.css" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Employer\docs\assets\css\docs.css" />
+    <Content Include="Employer\docs\assets\css\highlighter.css" />
+    <Content Include="Employer\docs\assets\img\AdminLTELogo.png" />
+    <Content Include="Employer\docs\assets\img\logo-xl.png" />
+    <Content Include="Employer\docs\assets\img\logo-xs.png" />
+    <Content Include="Employer\docs\assets\img\user1-128x128.jpg" />
+    <Content Include="Employer\docs\assets\img\user3-128x128.jpg" />
+    <Content Include="Employer\docs\assets\img\user4-128x128.jpg" />
+    <Content Include="Employer\docs\assets\img\user5-128x128.jpg" />
+    <Content Include="Employer\docs\assets\img\user6-128x128.jpg" />
+    <Content Include="Employer\docs\assets\img\user7-128x128.jpg" />
+    <Content Include="Employer\docs\assets\img\user8-128x128.jpg" />
+    <Content Include="Employer\docs\assets\js\adminlte.js" />
+    <Content Include="Employer\docs\assets\js\adminlte.min.js" />
+    <Content Include="Employer\docs\assets\js\demo.js" />
+    <Content Include="Employer\docs\assets\js\pages\dashboard.js" />
+    <Content Include="Employer\docs\assets\js\pages\dashboard2.js" />
+    <Content Include="Employer\docs\assets\js\pages\dashboard3.js" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\all.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\all.min.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\brands.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\brands.min.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\regular.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\regular.min.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\solid.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\solid.min.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Employer\docs\assets\plugins\jquery\core.js" />
+    <Content Include="Employer\docs\assets\plugins\jquery\jquery.js" />
+    <Content Include="Employer\docs\assets\plugins\jquery\jquery.min.js" />
+    <Content Include="Employer\docs\assets\plugins\jquery\jquery.slim.js" />
+    <Content Include="Employer\docs\assets\plugins\jquery\jquery.slim.min.js" />
+    <Content Include="Employer\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.css" />
+    <Content Include="Employer\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.min.css" />
+    <Content Include="Employer\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.js" />
+    <Content Include="Employer\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="Employer\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.js" />
+    <Content Include="Employer\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper-utils.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper-utils.min.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper.min.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper-utils.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper-utils.min.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper.min.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper-utils.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper-utils.min.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper.js" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper.min.js" />
+    <Content Include="Employer\docs\_includes\foot.html" />
+    <Content Include="Employer\docs\_includes\footer.html" />
+    <Content Include="Employer\docs\_includes\head.html" />
+    <Content Include="Employer\docs\_includes\navbar.html" />
+    <Content Include="Employer\docs\_includes\sidebar.html" />
+    <Content Include="Employer\docs\_layouts\default.html" />
+    <Content Include="Employer\docs\_layouts\home.html" />
+    <Content Include="Employer\docs\_layouts\page.html" />
+    <Content Include="Employer\docs\_layouts\post.html" />
+    <Content Include="Employer\EmployerRate.aspx" />
+    <Content Include="Employer\HomeEmployer.aspx" />
+    <Content Include="Employer\MyJob.aspx" />
+    <Content Include="Employer\pages\calendar.html" />
+    <Content Include="Employer\pages\charts\chartjs.html" />
+    <Content Include="Employer\pages\charts\flot.html" />
+    <Content Include="Employer\pages\charts\inline.html" />
+    <Content Include="Employer\pages\examples\404.html" />
+    <Content Include="Employer\pages\examples\500.html" />
+    <Content Include="Employer\pages\examples\blank.html" />
+    <Content Include="Employer\pages\examples\contacts.html" />
+    <Content Include="Employer\pages\examples\e_commerce.html" />
+    <Content Include="Employer\pages\examples\forgot-password.html" />
+    <Content Include="Employer\pages\examples\invoice-print.html" />
+    <Content Include="Employer\pages\examples\invoice.html" />
+    <Content Include="Employer\pages\examples\language-menu.html" />
+    <Content Include="Employer\pages\examples\legacy-user-menu.html" />
+    <Content Include="Employer\pages\examples\lockscreen.html" />
+    <Content Include="Employer\pages\examples\login.html" />
+    <Content Include="Employer\pages\examples\pace.html" />
+    <Content Include="Employer\pages\examples\profile.html" />
+    <Content Include="Employer\pages\examples\projects.html" />
+    <Content Include="Employer\pages\examples\project_add.html" />
+    <Content Include="Employer\pages\examples\project_detail.html" />
+    <Content Include="Employer\pages\examples\project_edit.html" />
+    <Content Include="Employer\pages\examples\recover-password.html" />
+    <Content Include="Employer\pages\examples\register.html" />
+    <Content Include="Employer\pages\forms\advanced.html" />
+    <Content Include="Employer\pages\forms\editors.html" />
+    <Content Include="Employer\pages\forms\general.html" />
+    <Content Include="Employer\pages\gallery.html" />
+    <Content Include="Employer\pages\layout\boxed.html" />
+    <Content Include="Employer\pages\layout\collapsed-sidebar.html" />
+    <Content Include="Employer\pages\layout\fixed-footer.html" />
+    <Content Include="Employer\pages\layout\fixed-sidebar.html" />
+    <Content Include="Employer\pages\layout\fixed-topnav.html" />
+    <Content Include="Employer\pages\layout\top-nav.html" />
+    <Content Include="Employer\pages\mailbox\compose.html" />
+    <Content Include="Employer\pages\mailbox\mailbox.html" />
+    <Content Include="Employer\pages\mailbox\read-mail.html" />
+    <Content Include="Employer\pages\tables\data.html" />
+    <Content Include="Employer\pages\tables\jsgrid.html" />
+    <Content Include="Employer\pages\tables\simple.html" />
+    <Content Include="Employer\pages\UI\buttons.html" />
+    <Content Include="Employer\pages\UI\general.html" />
+    <Content Include="Employer\pages\UI\icons.html" />
+    <Content Include="Employer\pages\UI\modals.html" />
+    <Content Include="Employer\pages\UI\navbar.html" />
+    <Content Include="Employer\pages\UI\ribbons.html" />
+    <Content Include="Employer\pages\UI\sliders.html" />
+    <Content Include="Employer\pages\UI\timeline.html" />
+    <Content Include="Employer\pages\widgets.html" />
+    <Content Include="Employer\Password.aspx" />
+    <Content Include="Employer\Profile.aspx" />
+    <Content Include="Employer\RateReview.aspx" />
+    <Content Include="Employer\ViewBid.aspx" />
+    <Content Include="Visit\About.aspx" />
+    <Content Include="Visit\css\style.css" />
+    <Content Include="Visit\EmployerRegister.aspx" />
+    <Content Include="Visit\EmployerSignIn.aspx" />
+    <Content Include="Visit\EmploySignIn.aspx" />
+    <Content Include="Visit\img\freelancers.jpg" />
+    <Content Include="Visit\Register.aspx" />
+    <Content Include="Visit\VisitHome.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bid.aspx.cs">
+      <DependentUpon>Bid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bid.aspx.designer.cs">
+      <DependentUpon>Bid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employ.aspx.cs">
+      <DependentUpon>Employ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Employ.aspx.designer.cs">
+      <DependentUpon>Employ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employar.aspx.cs">
+      <DependentUpon>Employar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Employar.aspx.designer.cs">
+      <DependentUpon>Employar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ProjectSkill.aspx.cs">
+      <DependentUpon>ProjectSkill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ProjectSkill.aspx.designer.cs">
+      <DependentUpon>ProjectSkill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Rate.aspx.cs">
+      <DependentUpon>Rate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Rate.aspx.designer.cs">
+      <DependentUpon>Rate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Skill.aspx.cs">
+      <DependentUpon>Skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Skill.aspx.designer.cs">
+      <DependentUpon>Skill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\AddBid.aspx.cs">
+      <DependentUpon>AddBid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\AddBid.aspx.designer.cs">
+      <DependentUpon>AddBid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployBid.aspx.cs">
+      <DependentUpon>EmployBid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployBid.aspx.designer.cs">
+      <DependentUpon>EmployBid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee.Master.cs">
+      <DependentUpon>Employee.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee.Master.designer.cs">
+      <DependentUpon>Employee.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployProject.aspx.cs">
+      <DependentUpon>EmployProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployProject.aspx.designer.cs">
+      <DependentUpon>EmployProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployRate.aspx.cs">
+      <DependentUpon>EmployRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployRate.aspx.designer.cs">
+      <DependentUpon>EmployRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\HomeEmploy.aspx.cs">
+      <DependentUpon>HomeEmploy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\HomeEmploy.aspx.designer.cs">
+      <DependentUpon>HomeEmploy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Rate-Review.aspx.cs">
+      <DependentUpon>Rate-Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Rate-Review.aspx.designer.cs">
+      <DependentUpon>Rate-Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\CreateJob.aspx.cs">
+      <DependentUpon>CreateJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\CreateJob.aspx.designer.cs">
+      <DependentUpon>CreateJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\Employer.Master.cs">
+      <DependentUpon>Employer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\Employer.Master.designer.cs">
+      <DependentUpon>Employer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\EmployerRate.aspx.cs">
+      <DependentUpon>EmployerRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\EmployerRate.aspx.designer.cs">
+      <DependentUpon>EmployerRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\HomeEmployer.aspx.cs">
+      <DependentUpon>HomeEmployer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\HomeEmployer.aspx.designer.cs">
+      <DependentUpon>HomeEmployer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\MyJob.aspx.cs">
+      <DependentUpon>MyJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\MyJob.aspx.designer.cs">
+      <DependentUpon>MyJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\RateReview.aspx.cs">
+      <DependentUpon>RateReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\RateReview.aspx.designer.cs">
+      <DependentUpon>RateReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\ViewBid.aspx.cs">
+      <DependentUpon>ViewBid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employer\ViewBid.aspx.designer.cs">
+      <DependentUpon>ViewBid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Visit\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visit\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visit\EmployerRegister.aspx.cs">
+      <DependentUpon>EmployerRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visit\EmployerRegister.aspx.designer.cs">
+      <DependentUpon>EmployerRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visit\EmployerSignIn.aspx.cs">
+      <DependentUpon>EmployerSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visit\EmployerSignIn.aspx.designer.cs">
+      <DependentUpon>EmployerSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visit\EmploySignIn.aspx.cs">
+      <DependentUpon>EmploySignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visit\EmploySignIn.aspx.designer.cs">
+      <DependentUpon>EmploySignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visit\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visit\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visit\Visit.Master.cs">
+      <DependentUpon>Visit.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visit\Visit.Master.designer.cs">
+      <DependentUpon>Visit.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Visit\VisitHome.aspx.cs">
+      <DependentUpon>VisitHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visit\VisitHome.aspx.designer.cs">
+      <DependentUpon>VisitHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Admin\dist\css\adminlte.css.map" />
+    <Content Include="Admin\dist\css\adminlte.min.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Admin\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Admin\dist\js\adminlte.js.map" />
+    <Content Include="Admin\dist\js\adminlte.min.js.map" />
+    <Content Include="Admin\docs\.npmignore" />
+    <Content Include="Admin\docs\assets\css\adminlte.css.map" />
+    <Content Include="Admin\docs\assets\css\adminlte.min.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.components.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.core.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.pages.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Admin\docs\assets\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Admin\docs\assets\js\adminlte.js.map" />
+    <Content Include="Admin\docs\assets\js\adminlte.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Admin\docs\assets\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="Admin\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="Admin\docs\assets\plugins\jquery\jquery.min.map" />
+    <Content Include="Admin\docs\assets\plugins\jquery\jquery.slim.min.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper-utils.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper-utils.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\esm\popper.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper-utils.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper-utils.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\popper.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper-utils.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper-utils.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper.js.flow" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\popper.min.js.map" />
+    <Content Include="Admin\docs\assets\plugins\popper\umd\poppper.js.flow" />
+    <Content Include="Admin\docs\browser-support.md" />
+    <Content Include="Admin\docs\components\boxes.md" />
+    <Content Include="Admin\docs\components\cards.md" />
+    <Content Include="Admin\docs\components\control-sidebar.md" />
+    <Content Include="Admin\docs\components\direct-chat.md" />
+    <Content Include="Admin\docs\components\main-header.md" />
+    <Content Include="Admin\docs\components\main-sidebar.md" />
+    <Content Include="Admin\docs\components\miscellaneous.md" />
+    <Content Include="Admin\docs\components\plugins.md" />
+    <Content Include="Admin\docs\components\ribbons.md" />
+    <Content Include="Admin\docs\components\timeline.md" />
+    <Content Include="Admin\docs\dependencies.md" />
+    <Content Include="Admin\docs\faq.md" />
+    <Content Include="Admin\docs\Gemfile" />
+    <Content Include="Admin\docs\implementations.md" />
+    <Content Include="Admin\docs\index.md" />
+    <Content Include="Admin\docs\javascript\card-refresh.md" />
+    <Content Include="Admin\docs\javascript\card-widget.md" />
+    <Content Include="Admin\docs\javascript\control-sidebar.md" />
+    <Content Include="Admin\docs\javascript\direct-chat.md" />
+    <Content Include="Admin\docs\javascript\layout.md" />
+    <Content Include="Admin\docs\javascript\push-menu.md" />
+    <Content Include="Admin\docs\javascript\toasts.md" />
+    <Content Include="Admin\docs\javascript\todo-list.md" />
+    <Content Include="Admin\docs\javascript\treeview.md" />
+    <Content Include="Admin\docs\layout.md" />
+    <Content Include="Admin\docs\license.md" />
+    <Content Include="Admin\docs\upgrade-guide.md" />
+    <Content Include="Admin\docs\_config.yml" />
+    <Content Include="Employee\Employee.Master" />
+    <Content Include="Employee\dist\css\adminlte.css.map" />
+    <Content Include="Employee\dist\css\adminlte.min.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Employee\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Employee\dist\js\adminlte.js.map" />
+    <Content Include="Employee\dist\js\adminlte.min.js.map" />
+    <Content Include="Employee\docs\.npmignore" />
+    <Content Include="Employee\docs\_config.yml" />
+    <Content Include="Employee\docs\assets\css\adminlte.css.map" />
+    <Content Include="Employee\docs\assets\css\adminlte.min.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.components.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.core.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.pages.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Employee\docs\assets\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Employee\docs\assets\js\adminlte.js.map" />
+    <Content Include="Employee\docs\assets\js\adminlte.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Employee\docs\assets\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="Employee\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="Employee\docs\assets\plugins\jquery\jquery.min.map" />
+    <Content Include="Employee\docs\assets\plugins\jquery\jquery.slim.min.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper-utils.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper-utils.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\esm\popper.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper-utils.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper-utils.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\popper.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper-utils.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper-utils.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper.js.flow" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\popper.min.js.map" />
+    <Content Include="Employee\docs\assets\plugins\popper\umd\poppper.js.flow" />
+    <Content Include="Employee\docs\browser-support.md" />
+    <Content Include="Employee\docs\components\boxes.md" />
+    <Content Include="Employee\docs\components\cards.md" />
+    <Content Include="Employee\docs\components\control-sidebar.md" />
+    <Content Include="Employee\docs\components\direct-chat.md" />
+    <Content Include="Employee\docs\components\main-header.md" />
+    <Content Include="Employee\docs\components\main-sidebar.md" />
+    <Content Include="Employee\docs\components\miscellaneous.md" />
+    <Content Include="Employee\docs\components\plugins.md" />
+    <Content Include="Employee\docs\components\ribbons.md" />
+    <Content Include="Employee\docs\components\timeline.md" />
+    <Content Include="Employee\docs\dependencies.md" />
+    <Content Include="Employee\docs\faq.md" />
+    <Content Include="Employee\docs\Gemfile" />
+    <Content Include="Employee\docs\implementations.md" />
+    <Content Include="Employee\docs\index.md" />
+    <Content Include="Employee\docs\javascript\card-refresh.md" />
+    <Content Include="Employee\docs\javascript\card-widget.md" />
+    <Content Include="Employee\docs\javascript\control-sidebar.md" />
+    <Content Include="Employee\docs\javascript\direct-chat.md" />
+    <Content Include="Employee\docs\javascript\layout.md" />
+    <Content Include="Employee\docs\javascript\push-menu.md" />
+    <Content Include="Employee\docs\javascript\toasts.md" />
+    <Content Include="Employee\docs\javascript\todo-list.md" />
+    <Content Include="Employee\docs\javascript\treeview.md" />
+    <Content Include="Employee\docs\layout.md" />
+    <Content Include="Employee\docs\license.md" />
+    <Content Include="Employee\docs\upgrade-guide.md" />
+    <Content Include="Employer\dist\css\adminlte.css.map" />
+    <Content Include="Employer\dist\css\adminlte.min.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Employer\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Employer\dist\js\adminlte.js.map" />
+    <Content Include="Employer\dist\js\adminlte.min.js.map" />
+    <Content Include="Employer\docs\.npmignore" />
+    <Content Include="Employer\docs\_config.yml" />
+    <Content Include="Employer\docs\assets\css\adminlte.css.map" />
+    <Content Include="Employer\docs\assets\css\adminlte.min.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.components.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.core.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.pages.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Employer\docs\assets\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Employer\docs\assets\js\adminlte.js.map" />
+    <Content Include="Employer\docs\assets\js\adminlte.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Employer\docs\assets\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="Employer\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="Employer\docs\assets\plugins\jquery\jquery.min.map" />
+    <Content Include="Employer\docs\assets\plugins\jquery\jquery.slim.min.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper-utils.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper-utils.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\esm\popper.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper-utils.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper-utils.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\popper.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper-utils.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper-utils.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper.js.flow" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\popper.min.js.map" />
+    <Content Include="Employer\docs\assets\plugins\popper\umd\poppper.js.flow" />
+    <Content Include="Employer\docs\browser-support.md" />
+    <Content Include="Employer\docs\components\boxes.md" />
+    <Content Include="Employer\docs\components\cards.md" />
+    <Content Include="Employer\docs\components\control-sidebar.md" />
+    <Content Include="Employer\docs\components\direct-chat.md" />
+    <Content Include="Employer\docs\components\main-header.md" />
+    <Content Include="Employer\docs\components\main-sidebar.md" />
+    <Content Include="Employer\docs\components\miscellaneous.md" />
+    <Content Include="Employer\docs\components\plugins.md" />
+    <Content Include="Employer\docs\components\ribbons.md" />
+    <Content Include="Employer\docs\components\timeline.md" />
+    <Content Include="Employer\docs\dependencies.md" />
+    <Content Include="Employer\docs\faq.md" />
+    <Content Include="Employer\docs\Gemfile" />
+    <Content Include="Employer\docs\implementations.md" />
+    <Content Include="Employer\docs\index.md" />
+    <Content Include="Employer\docs\javascript\card-refresh.md" />
+    <Content Include="Employer\docs\javascript\card-widget.md" />
+    <Content Include="Employer\docs\javascript\control-sidebar.md" />
+    <Content Include="Employer\docs\javascript\direct-chat.md" />
+    <Content Include="Employer\docs\javascript\layout.md" />
+    <Content Include="Employer\docs\javascript\push-menu.md" />
+    <Content Include="Employer\docs\javascript\toasts.md" />
+    <Content Include="Employer\docs\javascript\todo-list.md" />
+    <Content Include="Employer\docs\javascript\treeview.md" />
+    <Content Include="Employer\docs\layout.md" />
+    <Content Include="Employer\docs\license.md" />
+    <Content Include="Employer\docs\upgrade-guide.md" />
+    <Content Include="Employer\Employer.Master" />
+    <None Include="packages.config" />
+    <Content Include="Visit\Visit.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53233</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44372/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
